@@ -55,5 +55,7 @@ let addedCourses = [
         rating: 3.8,
     }
 ];
-const finalCourses = [...addedCourses, ...courses];
+
+const combined = (arr1,arr2)=> [...arr1,...arr2];
+const finalCourses = combined(addedCourses,courses)
 console.log(finalCourses);
