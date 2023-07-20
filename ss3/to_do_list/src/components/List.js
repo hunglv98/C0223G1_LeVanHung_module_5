@@ -9,19 +9,25 @@ class List extends React.Component {
             list: []
         };
     }
+
+    clickButton = () => {
+        this.setState((temp) => {
+            const input = document.getElementById('input').value;
+            if (input !== "" && temp.list.indexOf(input) === (-1)) {
+                return {
+                    list: [...temp.list, input],
+                    string: ""
+                }
+            }
+        }
+        )
+
+    }
     render() {
         return <div className='container' >
             <h1 style={{ textAlign: 'center' }}>To-do List</h1>
             <input style={{ width: '300px', display: 'inline-block' }} className='form-control' id='input' />
-            <button className='btn btn-outline-primary' type='button' onClick={() => {
-                const input = document.getElementById('input').value;
-                if (input !== "" && this.state.list.indexOf(input) === (-1)) {
-                    this.setState({
-                        list: [...this.state.list, input],
-                        string: ""
-                    })
-                }
-            }} >ADD</button>
+            <button className='btn btn-outline-primary' type='button' onClick={this.clickButton} >ADD</button>
             <div>
                 <h4>To-do List</h4>
                 <ul>
