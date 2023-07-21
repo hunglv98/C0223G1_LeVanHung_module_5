@@ -7300,7 +7300,7 @@ h1, h2, h3, h4, h5,
   color: #8d703b !important; }
 
 .ftco-navbar-light {
-  background: transparent;
+  background: transparent! important;
   position: absolute;
   top: 20px;
   left: 0;

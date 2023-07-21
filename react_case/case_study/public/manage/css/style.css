@@ -314,7 +314,7 @@ h3.sub-heading-agileits {
 
 
 /*-- form --*/
-
+.booking-form-w3layouts input[type="number"],
 .booking-form-w3layouts input[type="text"],
 .booking-form-w3layouts input[type="email"],
 .booking-form-w3layouts textarea,
