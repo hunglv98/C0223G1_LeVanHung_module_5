@@ -3,16 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ListContract from './components/ListContract';
-import EditContract from './components/EditContract';
-import CreateContract from './components/CreateContract';
-
+import BookManagement from './components/BookManagement';
+import CreateBook from './components/CreateBook';
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import EditBook from './components/EditBook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ListContract />
-  </React.StrictMode>
+  <BrowserRouter>
+    <Routes >
+      <Route path='/' element={<BookManagement></BookManagement>}></Route>
+      <Route path='/edit/:id' element={<EditBook />}> </Route>
+    </Routes>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

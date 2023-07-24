@@ -3,15 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ListContract from './components/ListContract';
-import EditContract from './components/EditContract';
-import CreateContract from './components/CreateContract';
-
+import ToDoList from './components/ToDoList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ListContract />
+    <ToDoList />
   </React.StrictMode>
 );
 
