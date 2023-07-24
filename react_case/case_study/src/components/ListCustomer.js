@@ -1,7 +1,9 @@
 import React from 'react';
 
-function ListContract() {
+function ListCustomer() {
+
     return (
+
         <>
             <div className="container-xl">
                 <div className="table-responsive">
@@ -9,7 +11,7 @@ function ListContract() {
                         <div className="table-title">
                             <div className="row">
                                 <div className="col-sm-6">
-                                    <h2>Manage <b>Contract</b></h2>
+                                    <h2>Manage <b>Customer</b></h2>
                                 </div>
                                 <div className="col-sm-6">
                                     <a href="#addEmployeeModal" className="btn btn-success" data-toggle="modal"><i className="material-icons"></i> <span>Add New Service</span></a>
@@ -20,65 +22,83 @@ function ListContract() {
                         <table className="table table-striped table-hover">
                             <thead>
                                 <tr>
-                                    <th>Number</th>
-                                    <th>Rental Date</th>
-                                    <th>Due Date</th>
-                                    <th>Deposit($)</th>
-                                    <th>Total Amount($)</th>
-                                    <th>Action</th>
+                                    <th>Name</th>
+                                    <th>Date of Birth</th>
+                                    <th>Gender</th>
+                                    <th>Identity Number</th>
+                                    <th>Phone Number</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>Type</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>FRM-2000</td>
-                                    <td>12-12-2022</td>
-                                    <td>15-12-2022</td>
-                                    <td>100</td>
-                                    <td>200</td>
+                                    <td>Lee Min Ho</td>
+                                    <td>12-12-2002</td>
+                                    <td>Male</td>
+                                    <td>123123123123</td>
+                                    <td>0899887665</td>
+                                    <td>holm@gmai.com</td>
+                                    <td>Korean</td>
+                                    <td>Member</td>
                                     <td>
                                         <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
                                         <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>FRM-2001</td>
-                                    <td>21-12-2022</td>
-                                    <td>23-12-2022</td>
-                                    <td>150</td>
-                                    <td>300</td>
+                                    <td>Lee Min Hook</td>
+                                    <td>15-12-2002</td>
+                                    <td>Female</td>
+                                    <td>123123123124</td>
+                                    <td>0899887664</td>
+                                    <td>hooklm@gmai.com</td>
+                                    <td>Korean</td>
+                                    <td>Gold</td>
                                     <td>
                                         <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
                                         <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>FRM-2002</td>
-                                    <td>15-01-2023</td>
-                                    <td>18-01-2023</td>
-                                    <td>150</td>
-                                    <td>300</td>
+                                    <td>Lee Kwang Su</td>
+                                    <td>15-01-2000</td>
+                                    <td>Male</td>
+                                    <td>123123123124</td>
+                                    <td>0899887623</td>
+                                    <td>sulk@gmai.com</td>
+                                    <td>Korean</td>
+                                    <td>Silver</td>
                                     <td>
                                         <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
                                         <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>FRM-2003</td>
-                                    <td>30-01-2023</td>
-                                    <td>02-02-2023</td>
-                                    <td>300</td>
-                                    <td>700</td>
+                                    <td>Lee Han Che</td>
+                                    <td>17-03-1999</td>
+                                    <td>Male</td>
+                                    <td>123123123454</td>
+                                    <td>08998876987</td>
+                                    <td>chlk@gmai.com</td>
+                                    <td>Korean</td>
+                                    <td>Diamond</td>
                                     <td>
                                         <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
                                         <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>FRM-2004</td>
-                                    <td>04-04-2023</td>
-                                    <td>07-09-2023</td>
-                                    <td>500</td>
-                                    <td>1000</td>
+                                    <td>Kim Han Cook</td>
+                                    <td>11-09-1994</td>
+                                    <td>Female</td>
+                                    <td>123123123852</td>
+                                    <td>089988767665</td>
+                                    <td>cookkh@gmai.com</td>
+                                    <td>Korean</td>
+                                    <td>Platinum</td>
                                     <td>
                                         <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
                                         <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
@@ -196,5 +216,4 @@ function ListContract() {
     );
 }
 
-
-export default ListContract;
+export default ListCustomer;

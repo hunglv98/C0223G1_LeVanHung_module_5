@@ -24,6 +24,7 @@ function BookManagement() {
     }
 
     return (<div className='container'>
+        <Link className='btn btn-outline-primary' to={`/create`} >Add New Book</Link>
         <table className='table'>
             <thead>
                 <tr>

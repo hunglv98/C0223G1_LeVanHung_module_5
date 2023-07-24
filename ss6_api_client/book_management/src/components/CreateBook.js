@@ -2,26 +2,30 @@ import React, { useState } from 'react';
 import { Formik, Form, ErrorMessage, Field } from 'formik';
 import * as yup from 'yup';
 import { addBook } from '../service/BookService';
+import { useNavigate } from 'react-router-dom';
 
 
 function CreateBook() {
+    const navigate = useNavigate();
     return (<>
         <Formik
             initialValues={{ title: "", quantity: "" }}
             validationSchema={yup.object({
                 title: yup.string().required(),
                 quantity: yup.number().required()
-        
+
             })}
             onSubmit={
-               async (values) => { 
+                async (values) => {
                     const obj = {
-                        title:values.title,
-                        quantity:values.quantity
+                        title: values.title,
+                        quantity: values.quantity
                     }
                     await addBook(obj);
+                    alert("Create Successfully");
+                    navigate("/");
                 }
-                
+
             }
         >
             <Form>

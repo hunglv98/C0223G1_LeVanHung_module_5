@@ -6,12 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import ListContract from './components/ListContract';
 import EditContract from './components/EditContract';
 import CreateContract from './components/CreateContract';
+import ListCustomer from './components/ListCustomer';
+import EditCustomer from './components/EditCustomer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ListContract />
+    <EditCustomer />
   </React.StrictMode>
 );
 

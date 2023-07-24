@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import BookManagement from './components/BookManagement';
 import CreateBook from './components/CreateBook';
-import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import EditBook from './components/EditBook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,6 +14,7 @@ root.render(
     <Routes >
       <Route path='/' element={<BookManagement></BookManagement>}></Route>
       <Route path='/edit/:id' element={<EditBook />}> </Route>
+      <Route path='/create' element={<CreateBook />}></Route>
     </Routes>
   </BrowserRouter>
 );
