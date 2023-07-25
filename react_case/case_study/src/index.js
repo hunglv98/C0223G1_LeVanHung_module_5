@@ -8,12 +8,16 @@ import EditContract from './components/EditContract';
 import CreateContract from './components/CreateContract';
 import ListCustomer from './components/ListCustomer';
 import EditCustomer from './components/EditCustomer';
+import CreateCustomer from './components/CreateCustomer';
+import ListService from './components/ListService';
+import CreateService from './components/CreateService';
+import EditService from './components/EditService';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <EditCustomer />
+    <EditService />
   </React.StrictMode>
 );
 
