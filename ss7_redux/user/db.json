@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 2,
+      "name": "HungLV",
+      "email": "hunglv@gmail.com",
+      "website": "hunglv.com"
+    },
+    {
+      "id": 3,
+      "name": "KietCC",
+      "email": "kietcc@gmail.com",
+      "website": "kietcc.com"
+    },
+    {
+      "id": 5,
+      "name": "SonPM",
+      "email": "sonpm@gmail.com",
+      "website": "sonpm.com"
+    }
+  ]
+}

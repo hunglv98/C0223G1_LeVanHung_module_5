@@ -18,9 +18,8 @@ function BookManagement() {
     async function deleteBook(id) {
         if (window.confirm("Do you want to delete?")) {
             await deleteBookById(id);
-            const data = await getBookList();
-            setBooks(data);
-            alert("Delete Successfully")
+            getList();
+            alert("Delete Successfully");
         }
     }
 
