@@ -4,13 +4,12 @@ import { createTask, getListTask } from "../service/taskService";
 function ToDoList() {
     const [task, setTask] = useState([]);
 
+    const getList = async () => {
+        const data = await getListTask();
+        setTask(data);
+    }
     useEffect(() => {
-        const getList = async () => {
-            const data = await getListTask();
-            setTask(data);
-        }
         getList();
-
     }, []);
 
     const onSubmit = async () => {

@@ -1,16 +1,6 @@
 {
   "bookList": [
     {
-      "id": 1,
-      "title": "abc",
-      "quantity": "1234"
-    },
-    {
-      "id": 2,
-      "title": "abc",
-      "quantity": "32"
-    },
-    {
       "title": "sang",
       "quantity": "10",
       "id": 3

@@ -10,14 +10,13 @@ function EditBook() {
     const params = useParams();
     const navigate = useNavigate();
     const [book, setBooks] = useState({});
+    const getBook = async () => {
+        const data = await getBookById(params.id)
+        setBooks(data)
+    }
     useEffect(() => {
-        const getBook = async () => {
-            const data = await getBookById(params.id)
-            setBooks(data)
-        }
         getBook()
-
-    }, [])
+    }, [params.id])
 
     return (<>
         {book.id && (

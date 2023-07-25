@@ -5,22 +5,23 @@ import { Link } from "react-router-dom"
 function BookManagement() {
     const [books, setBooks] = useState([]);
 
+    const getList = async () => {
+        const data = await getBookList();
+        setBooks(data);
+    }
     useState(
         () => {
-            const getList = async () => {
-                const data = await getBookList();
-                setBooks(data);
-            }
             getList();
         }, []
     )
 
     async function deleteBook(id) {
-        console.log(id);
-        await deleteBookById(id);
-        const data = await getBookList();
-        setBooks(data);
-        alert("Delete Successfully")
+        if (window.confirm("Do you want to delete?")) {
+            await deleteBookById(id);
+            const data = await getBookList();
+            setBooks(data);
+            alert("Delete Successfully")
+        }
     }
 
     return (<div className='container'>
