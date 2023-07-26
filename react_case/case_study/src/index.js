@@ -17,7 +17,7 @@ import EditService from './components/EditService';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <EditService />
+    <ListCustomer />
   </React.StrictMode>
 );
 

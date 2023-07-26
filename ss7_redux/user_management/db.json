@@ -4,31 +4,13 @@
       "id": 1,
       "name": "NamPC",
       "email": "nampc@gmail.com",
-      "website":"nampc.com"
+      "website": "nampc.com"
     },
     {
       "id": 2,
       "name": "HungLV",
       "email": "hunglv@gmail.com",
-      "website":"hunglv.com"
-    },
-    {
-      "id": 3,
-      "name": "KietCC",
-      "email": "kietcc@gmail.com",
-      "website":"kietcc.com"
-    },
-    {
-      "id": 4,
-      "name": "HoaLTY",
-      "email": "hoalty@gmail.com",
-      "website":"hoalty.com"
-    },{
-      "id": 5,
-      "name": "SonPM",
-      "email": "sonpm@gmail.com",
-      "website":"sonpm.com"
+      "website": "hunglv.com"
     }
   ]
-  
 }

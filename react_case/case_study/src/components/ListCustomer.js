@@ -1,6 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getListCustomer } from '../service/CustomerService';
 
 function ListCustomer() {
+    const [customers, setCustomers] = useState([])
+    const getList = async () => {
+        const data = await getListCustomer()
+        setCustomers(data)
+    }
+    useEffect(() => {
+        getList()
+    }, [])
 
     return (
 
@@ -34,7 +43,31 @@ function ListCustomer() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                {customers.map((c, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td>{c.name}</td>
+                                            <td>{c.dateOfBirth}</td>
+                                            <td>{c.gender}</td>
+                                            <td>{c.identityNumber}</td>
+                                            <td>{c.phoneNumber}</td>
+                                            <td>{c.email}</td>
+                                            <td>{c.address}</td>
+                                            <td>{c.type}</td>
+                                            <td>
+                                        <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
+                                        <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
+                                    </td>
+                                        </tr>
+
+
+                                    )
+
+
+                                }
+                                )}
+
+                                {/* <tr>
                                     <td>Lee Min Ho</td>
                                     <td>12-12-2002</td>
                                     <td>Male</td>
@@ -103,7 +136,7 @@ function ListCustomer() {
                                         <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
                                         <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
                                     </td>
-                                </tr>
+                                </tr> */}
                             </tbody>
                         </table>
                         <div className="clearfix">

@@ -12,4 +12,4 @@ const rootReducer = combineReducers({
     list: list
 })
 
-export const store = createStore(rootReducer,composedEnhancer);
+export const store = createStore(rootReducer, composedEnhancer);
