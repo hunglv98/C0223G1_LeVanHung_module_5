@@ -12,13 +12,30 @@ import CreateCustomer from './components/CreateCustomer';
 import ListService from './components/ListService';
 import CreateService from './components/CreateService';
 import EditService from './components/EditService';
+import {BrowserRouter, Routes,Route} from "react-router-dom"
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Content from './components/Content';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ListCustomer />
-  </React.StrictMode>
+  <BrowserRouter>
+  <Navbar />
+  <Routes>
+    <Route path='/' element={<Content />} />
+    <Route path='/service' element={<ListService />} />
+    <Route path='/service/create' element={<CreateService />} />
+    <Route path='/service/edit' element={<EditService />} />
+    <Route path='/customer' element={<ListCustomer />} />
+    <Route path='/customer/create' element={<CreateCustomer />} />
+    <Route path='/customer/edit' element={<EditCustomer />} />
+    <Route path='/contract' element={<ListContract />} />
+    <Route path='/contract/create' element={<CreateContract />} />
+    <Route path='/contract/edit' element={<EditContract />} />
+    </Routes>
+    <Footer />
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

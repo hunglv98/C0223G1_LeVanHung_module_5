@@ -99,7 +99,75 @@
       "type":"Platinum"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "contracts": [{
+    "id":1,
+    "number": "001",
+    "rentalDate":"12-12-2022",
+    "dueDate":"15-12-2022",
+    "deposit":"500",
+    "totalAmount":"1000"
+  },  {
+    "id":2,
+    "number": "002",
+    "rentalDate": "2023-09-10",
+    "dueDate": "2023-09-15",
+    "deposit": 800,
+    "totalAmount": 3200
+  },
+  {
+    "number": "003",
+    "rentalDate": "2023-10-01",
+    "dueDate": "2023-10-07",
+    "deposit": 600,
+    "totalAmount": 2400
+  },
+  {
+    "number": "004",
+    "rentalDate": "2023-11-15",
+    "dueDate": "2023-11-20",
+    "deposit": 1000,
+    "totalAmount": 4000
+  },
+  {
+    "number": "005",
+    "rentalDate": "2024-01-02",
+    "dueDate": "2024-01-05",
+    "deposit": 300,
+    "totalAmount": 1200
+  },
+  {
+    "number": "006",
+    "rentalDate": "2024-02-14",
+    "dueDate": "2024-02-20",
+    "deposit": 800,
+    "totalAmount": 3200
+  },
+  {
+    "number": "007",
+    "rentalDate": "2024-03-05",
+    "dueDate": "2024-03-10",
+    "deposit": 400,
+    "totalAmount": 1600
+  },
+  {
+    "number": "008",
+    "rentalDate": "2024-04-20",
+    "dueDate": "2024-04-25",
+    "deposit": 900,
+    "totalAmount": 3600
+  },
+  {
+    "number": "009",
+    "rentalDate": "2024-05-15",
+    "dueDate": "2024-05-20",
+    "deposit": 600,
+    "totalAmount": 2400
+  },
+  {
+    "number": "010",
+    "rentalDate": "2024-06-10",
+    "dueDate": "2024-06-15",
+    "deposit": 700,
+    "totalAmount": 2800
+  }]
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getListService } from '../service/FacilityService';
+import { Link } from 'react-router-dom';
 
 function ListService() {
   const [services, setService] = useState([])
@@ -24,7 +25,7 @@ function ListService() {
                   <h2>Manage <b>Service</b></h2>
                 </div>
                 <div className="col-sm-6">
-                  <a href="#addEmployeeModal" className="btn btn-success" data-toggle="modal"><i className="material-icons"></i> <span>Add New Service</span></a>
+                  <Link to={`/service/create`} className="btn btn-success" data-toggle="modal"><i className="material-icons"></i> <span>Add New Service</span></Link>
                   <a href="#deleteEmployeeModal" className="btn btn-danger" data-toggle="modal"><i className="material-icons"></i> <span>Delete</span></a>
                 </div>
               </div>

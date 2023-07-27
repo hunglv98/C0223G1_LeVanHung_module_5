@@ -1,6 +1,15 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { getListContract } from '../service/ContractService';
+import { Link } from 'react-router-dom';
 function ListContract() {
+    const [contracts,setContracts] = useState([])
+    const getList = async () =>{
+        const data = await getListContract();
+        setContracts(data)
+    }
+    useEffect(()=>{
+        getList()
+    },[])
     return (
         <>
             <div className="container-xl">
@@ -12,7 +21,7 @@ function ListContract() {
                                     <h2>Manage <b>Contract</b></h2>
                                 </div>
                                 <div className="col-sm-6">
-                                    <a href="#addEmployeeModal" className="btn btn-success" data-toggle="modal"><i className="material-icons"></i> <span>Add New Service</span></a>
+                                    <Link to={`/contract/create`} className="btn btn-success" data-toggle="modal"><i className="material-icons"></i> <span>Add New Contract</span></Link>
                                     <a href="#deleteEmployeeModal" className="btn btn-danger" data-toggle="modal"><i className="material-icons"></i> <span>Delete</span></a>
                                 </div>
                             </div>
@@ -29,7 +38,22 @@ function ListContract() {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                {contracts.map((c,index)=>{
+                                   return(<tr key={c.id}>
+                                        <td>{c.number}</td>
+                                        <td>{c.rentalDate}</td>
+                                        <td>{c.dueDate}</td>
+                                        <td>{c.deposit}</td>
+                                        <td>{c.totalAmount}</td>
+                                        <td>
+                                        <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
+                                        <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
+                                    </td>
+                                    </tr>)
+
+
+                                })}
+                                {/* <tr>
                                     <td>FRM-2000</td>
                                     <td>12-12-2022</td>
                                     <td>15-12-2022</td>
@@ -83,7 +107,7 @@ function ListContract() {
                                         <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
                                         <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
                                     </td>
-                                </tr>
+                                </tr> */}
                             </tbody>
                         </table>
                         <div className="clearfix">

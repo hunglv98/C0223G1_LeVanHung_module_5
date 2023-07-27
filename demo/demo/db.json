@@ -1,0 +1,42 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "hung123",
+      "type": {
+        "id": 1,
+        "name": "good"
+      }
+    },
+    {
+      "id": 2,
+      "name": "hung",
+      "type": {
+        "id": 1,
+        "name": "good"
+      }
+    },
+    {
+      "name": "123",
+      "type": {
+        "id": 2,
+        "name": "exculent"
+      },
+      "id": 3
+    }
+  ],
+  "type": [
+    {
+      "id": 1,
+      "name": "good"
+    },
+    {
+      "id": 2,
+      "name": "exculent"
+    },
+    {
+      "id": 1,
+      "name": "bad"
+    }
+  ]
+}

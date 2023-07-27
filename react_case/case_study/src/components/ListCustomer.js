@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getListCustomer } from '../service/CustomerService';
-
+import { Link } from 'react-router-dom';
 function ListCustomer() {
     const [customers, setCustomers] = useState([])
     const getList = async () => {
@@ -23,7 +23,7 @@ function ListCustomer() {
                                     <h2>Manage <b>Customer</b></h2>
                                 </div>
                                 <div className="col-sm-6">
-                                    <a href="#addEmployeeModal" className="btn btn-success" data-toggle="modal"><i className="material-icons"></i> <span>Add New Service</span></a>
+                                    <Link to={`/customer/create`} className="btn btn-success" data-toggle="modal"><i className="material-icons"></i> <span>Add New Customer</span></Link>
                                     <a href="#deleteEmployeeModal" className="btn btn-danger" data-toggle="modal"><i className="material-icons"></i> <span>Delete</span></a>
                                 </div>
                             </div>
