@@ -3,7 +3,7 @@
     {
       "id": 1,
       "Name": "Villa",
-      "UsageArea":"100",
+      "UsageArea": "100",
       "RentalCost": "400",
       "Capacity": "10",
       "TypeOfRent": "Day"
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "Name": "Room",
-      "UsageArea":"120",
+      "UsageArea": "120",
       "RentalCost": "500",
       "Capacity": "8",
       "TypeOfRent": "Year"
@@ -19,7 +19,7 @@
     {
       "id": 3,
       "Name": "House",
-      "UsageArea":"100",
+      "UsageArea": "100",
       "RentalCost": "450",
       "Capacity": "5",
       "TypeOfRent": "Month"
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "Name": "Room",
-      "UsageArea":"80",
+      "UsageArea": "80",
       "RentalCost": "300",
       "Capacity": "5",
       "TypeOfRent": "Day"
@@ -35,139 +35,234 @@
     {
       "id": 5,
       "Name": "Villa",
-      "UsageArea":"75",
+      "UsageArea": "75",
       "RentalCost": "200",
       "Capacity": "4",
       "TypeOfRent": "Month"
     }
-    
   ],
   "customer": [
     {
-      "id": 1,
-      "name": "Lee Min Ho",
-      "dateOfBirth": "12-12-2002",
-      "gender": "Male",
-      "identityNumber":"123123123123",
-      "phoneNumber":"0899887665",
-      "email":"holm@gmai.com",
-      "address":"Korean",
-      "type":"Member"
-    },
-    {
-      "id": 2,
-      "name": "Lee Min Hook",
-      "dateOfBirth": "15-12-2002",
-      "gender": "Female",
-      "identityNumber":"123123123124",
-      "phoneNumber":"0899887664",
-      "email":"hooklm@gmai.com",
-      "address":"Korean",
-      "type":"Gold"
-    },
-    {
-      "id": 3,
-      "name": "Lee Kwang Su",
-      "dateOfBirth": "15-01-2000",
-      "gender": "Male",
-      "identityNumber":"123123123124",
-      "phoneNumber":"0899887623",
-      "email":"sulk@gmai.com",
-      "address":"Korean",
-      "type":"Silver"
-    },
-    {
       "id": 4,
-      "name": "Lee Han Che",
+      "name": "Lee Han Cheeeee",
       "dateOfBirth": "17-03-1999",
       "gender": "Male",
-      "identityNumber":"123123123454",
-      "phoneNumber":"08998876987",
-      "email":"chlk@gmai.com",
-      "address":"Korean",
-      "type":"Diamond"
+      "identityNumber": "123123123454",
+      "phoneNumber": "08998876987",
+      "email": "chlk@gmai.com",
+      "address": "Korean",
+      "type": {
+        "id": 5,
+        "name": "Member"
+      }
     },
     {
       "id": 5,
       "name": "Kim Han Cook",
       "dateOfBirth": "11-09-1994",
       "gender": "Female",
-      "identityNumber":"123123123852",
-      "phoneNumber":"089988767665",
-      "email":"cookkh@gmai.com",
-      "address":"Korean",
-      "type":"Platinum"
+      "identityNumber": "123123123852",
+      "phoneNumber": "089988767665",
+      "email": "cookkh@gmai.com",
+      "address": "Korean",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      }
+    },
+    {
+      "name": "hung",
+      "dateOfBirth": "123",
+      "gender": "123123",
+      "identityNumber": "123",
+      "phoneNumber": "0905222545",
+      "email": "thienson991@gmail.com",
+      "address": "Quận Ngũ Hành Sơn",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "id": 6
+    },
+    {
+      "id": 8,
+      "name": "123",
+      "dateOfBirth": "123",
+      "gender": "123",
+      "identityNumber": "123123",
+      "phoneNumber": "123",
+      "email": "123@123.com",
+      "address": "123123",
+      "type": {
+        "id": 5,
+        "name": "Member"
+      }
+    },
+    {
+      "id": 9,
+      "name": "123",
+      "dateOfBirth": "123123",
+      "gender": "123123",
+      "identityNumber": "123",
+      "phoneNumber": "123123",
+      "email": "thienson991@gmail.com",
+      "address": "Quận Ngũ Hành Sơn",
+      "type": {
+        "id": 4,
+        "name": "Silver"
+      }
+    },
+    {
+      "name": "123123",
+      "dateOfBirth": "123123",
+      "gender": "123123",
+      "identityNumber": "123123",
+      "phoneNumber": "123123",
+      "email": "thienson991@gmail.com",
+      "address": "Quận Ngũ Hành Sơn",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "id": 10
+    },
+    {
+      "name": "123",
+      "dateOfBirth": "123",
+      "gender": "123",
+      "identityNumber": "123",
+      "phoneNumber": "123",
+      "email": "123@123.com",
+      "address": "Quận Ngũ Hành Sơn",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "id": 11
+    },
+    {
+      "name": "123123",
+      "dateOfBirth": "213123",
+      "gender": "123123",
+      "identityNumber": "12312312",
+      "phoneNumber": "123",
+      "email": "123@123.com",
+      "address": "Quận Ngũ Hànhn Sơ",
+      "type": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "id": 12
+    },
+    {
+      "name": "Thai ",
+      "dateOfBirth": "2012",
+      "gender": "BD",
+      "identityNumber": "123",
+      "phoneNumber": "0905222545",
+      "email": "thai@gmail",
+      "address": "Quận Ngũ Hành Sơn",
+      "type": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "id": 13
     }
   ],
-  "contracts": [{
-    "id":1,
-    "number": "001",
-    "rentalDate":"12-12-2022",
-    "dueDate":"15-12-2022",
-    "deposit":"500",
-    "totalAmount":"1000"
-  },  {
-    "id":2,
-    "number": "002",
-    "rentalDate": "2023-09-10",
-    "dueDate": "2023-09-15",
-    "deposit": 800,
-    "totalAmount": 3200
-  },
-  {
-    "number": "003",
-    "rentalDate": "2023-10-01",
-    "dueDate": "2023-10-07",
-    "deposit": 600,
-    "totalAmount": 2400
-  },
-  {
-    "number": "004",
-    "rentalDate": "2023-11-15",
-    "dueDate": "2023-11-20",
-    "deposit": 1000,
-    "totalAmount": 4000
-  },
-  {
-    "number": "005",
-    "rentalDate": "2024-01-02",
-    "dueDate": "2024-01-05",
-    "deposit": 300,
-    "totalAmount": 1200
-  },
-  {
-    "number": "006",
-    "rentalDate": "2024-02-14",
-    "dueDate": "2024-02-20",
-    "deposit": 800,
-    "totalAmount": 3200
-  },
-  {
-    "number": "007",
-    "rentalDate": "2024-03-05",
-    "dueDate": "2024-03-10",
-    "deposit": 400,
-    "totalAmount": 1600
-  },
-  {
-    "number": "008",
-    "rentalDate": "2024-04-20",
-    "dueDate": "2024-04-25",
-    "deposit": 900,
-    "totalAmount": 3600
-  },
-  {
-    "number": "009",
-    "rentalDate": "2024-05-15",
-    "dueDate": "2024-05-20",
-    "deposit": 600,
-    "totalAmount": 2400
-  },
-  {
-    "number": "010",
-    "rentalDate": "2024-06-10",
-    "dueDate": "2024-06-15",
-    "deposit": 700,
-    "totalAmount": 2800
-  }]
+  "contracts": [
+    {
+      "id": 1,
+      "number": "001",
+      "rentalDate": "12-12-2022",
+      "dueDate": "15-12-2022",
+      "deposit": "500",
+      "totalAmount": "1000"
+    },
+    {
+      "id": 2,
+      "number": "002",
+      "rentalDate": "2023-09-10",
+      "dueDate": "2023-09-15",
+      "deposit": 800,
+      "totalAmount": 3200
+    },
+    {
+      "number": "003",
+      "rentalDate": "2023-10-01",
+      "dueDate": "2023-10-07",
+      "deposit": 600,
+      "totalAmount": 2400
+    },
+    {
+      "number": "004",
+      "rentalDate": "2023-11-15",
+      "dueDate": "2023-11-20",
+      "deposit": 1000,
+      "totalAmount": 4000
+    },
+    {
+      "number": "005",
+      "rentalDate": "2024-01-02",
+      "dueDate": "2024-01-05",
+      "deposit": 300,
+      "totalAmount": 1200
+    },
+    {
+      "number": "006",
+      "rentalDate": "2024-02-14",
+      "dueDate": "2024-02-20",
+      "deposit": 800,
+      "totalAmount": 3200
+    },
+    {
+      "number": "007",
+      "rentalDate": "2024-03-05",
+      "dueDate": "2024-03-10",
+      "deposit": 400,
+      "totalAmount": 1600
+    },
+    {
+      "number": "008",
+      "rentalDate": "2024-04-20",
+      "dueDate": "2024-04-25",
+      "deposit": 900,
+      "totalAmount": 3600
+    },
+    {
+      "number": "009",
+      "rentalDate": "2024-05-15",
+      "dueDate": "2024-05-20",
+      "deposit": 600,
+      "totalAmount": 2400
+    },
+    {
+      "number": "010",
+      "rentalDate": "2024-06-10",
+      "dueDate": "2024-06-15",
+      "deposit": 700,
+      "totalAmount": 2800
+    }
+  ],
+  "customerType": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ]
 }

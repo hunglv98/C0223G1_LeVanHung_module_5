@@ -1,7 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as yup from "yup";
 import { Formik, Form, ErrorMessage, Field } from "formik"
+import { findAllType, findTypeById } from '../service/CustomerTypeService';
+import { createCustomer } from '../service/CustomerService';
+import { useNavigate } from 'react-router-dom';
 function CreateCustomer() {
+  const navigate = useNavigate()
+  const [types, setTyle] = useState([])
+  const getListType = async () => {
+    const data = await findAllType();
+    setTyle(data);
+  }
+  useEffect(() => {
+    getListType();
+  })
+
+
   return (
     <>
       {/*background*/}
@@ -20,7 +34,7 @@ function CreateCustomer() {
             type: ""
           }}
           validationSchema={yup.object({
-            name: yup.string().required(),
+            name: yup.string().required().matches(/^[A-Z]{1}[a-z]*(\s[A-Z]{1}[a-z]*)*$/),
             dateOfBirth: yup.string().required(),
             gender: yup.string().required(),
             identityNumber: yup.string().required(),
@@ -29,8 +43,24 @@ function CreateCustomer() {
             address: yup.string().required(),
             type: yup.string().required()
           })}
-          onSubmit={()=>{
-              alert("Create Successfully")
+          onSubmit={ async(values) => {
+            console.log(values.type);
+            // const type = JSON.parse(values.type)
+            // console.log(type);
+            const obj = {
+              name: values.name,
+              dateOfBirth: values.dateOfBirth,
+              gender: values.gender,
+              identityNumber: values.identityNumber,
+              phoneNumber: values.phoneNumber,
+              email: values.email,
+              address: values.address,
+              type: JSON.parse(values.type)
+            }
+            console.log(obj);
+            await createCustomer(obj);
+            alert("Add Successfully")
+            navigate("/customer")
           }}
         >
           <Form>
@@ -51,9 +81,9 @@ function CreateCustomer() {
                 <ErrorMessage name='gender' component={"div"} />
               </div>
               <div className="field-agileinfo-spc form-w3-agile-text22">
-                <Field id="datepicker" name="dateOfBirth" type="text" placeholder="Date of Birth" 
-                defaultValue onfocus="this.value = '';" 
-                onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required />
+                <Field id="datepicker" name="dateOfBirth" type="text" placeholder="Date of Birth"
+                  defaultValue onfocus="this.value = '';"
+                  onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required />
                 <ErrorMessage name='dateOfBirth' component={"div"} />
               </div>
               <div className="field-agileinfo-spc form-w3-agile-text33">
@@ -76,40 +106,18 @@ function CreateCustomer() {
             <div className="radio-section">
               <h6>Type: </h6>
               <ul className="radio-buttons-w3-agileits">
-                <li>
-                  <Field type="radio" id="a-option" name="type" value='Diamond'/>
-                  <label htmlFor="a-option">Diamond</label>
-                  <div className="check" />
-                </li>
-                <li>
-                  <Field type="radio" id="b-option" name="type" value='Platinum' />
-                  <label htmlFor="b-option">Platinum</label>
+                {types.length >0 && types.map((t)=>{
+                  return(
+                    <li key={t.id}>
+                  <Field type="radio" id={t.id} name="type" value={JSON.stringify(t)} />
+                  <label htmlFor={t.id}>{t.name}</label>
                   <div className="check">
                     <div className="inside" />
                   </div>
                 </li>
-                <li>
-                  <Field type="radio" id="c-option" name="type" value='Gold' />
-                  <label htmlFor="c-option">Gold</label>
-                  <div className="check">
-                    <div className="inside" />
-                  </div>
-                </li>
-                <li>
-                  <Field type="radio" id="d-option" name="type" value='Silver' />
-                  <label htmlFor="d-option">Silver</label>
-                  <div className="check">
-                    <div className="inside" />
-                  </div>
-                </li>
-                <li>
-                  <Field type="radio" id="e-option" name="type" value='Member' />
-                  <label htmlFor="e-option">Member</label>
-                  <div className="check">
-                  <ErrorMessage name='type' component={"div"} />
-                    <div className="inside" />
-                  </div>
-                </li>
+                  )
+                })}
+                <ErrorMessage name='type' component={"div"} />
               </ul>
               <div className="clear" />
             </div>

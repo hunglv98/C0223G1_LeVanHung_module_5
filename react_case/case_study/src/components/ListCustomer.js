@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { getListCustomer } from '../service/CustomerService';
+import { deleteCustomerById, getCustomerById, getListCustomer } from '../service/CustomerService';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 function ListCustomer() {
     const [customers, setCustomers] = useState([])
     const getList = async () => {
@@ -10,6 +11,32 @@ function ListCustomer() {
     useEffect(() => {
         getList()
     }, [])
+
+    const deleteCustomer = async (id) => {
+        const customer = await getCustomerById(id)
+        Swal.fire({
+            title: `Do you want to delete ${customer.name}?`,
+            text: 'You will not be able to recover this file!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }
+        ).then(async (res) => {
+            if (res.isConfirmed) {
+                await deleteCustomerById(id)
+                await getList()
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Delete success fully!!!!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            } else if (res.dismiss === Swal.DismissReason.cancel) {
+            }
+        })
+    }
 
     return (
 
@@ -53,90 +80,16 @@ function ListCustomer() {
                                             <td>{c.phoneNumber}</td>
                                             <td>{c.email}</td>
                                             <td>{c.address}</td>
-                                            <td>{c.type}</td>
+                                            <td>{c.type.name}</td>
                                             <td>
-                                        <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
-                                        <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
-                                    </td>
+                                                <Link to={`/customer/edit/${c.id}`} className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></Link>
+                                                <a onClick={() => deleteCustomer(c.id)} className="delete" data-toggle="modal">
+                                                    <i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
+                                            </td>
                                         </tr>
-
-
                                     )
-
-
                                 }
                                 )}
-
-                                {/* <tr>
-                                    <td>Lee Min Ho</td>
-                                    <td>12-12-2002</td>
-                                    <td>Male</td>
-                                    <td>123123123123</td>
-                                    <td>0899887665</td>
-                                    <td>holm@gmai.com</td>
-                                    <td>Korean</td>
-                                    <td>Member</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
-                                        <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Lee Min Hook</td>
-                                    <td>15-12-2002</td>
-                                    <td>Female</td>
-                                    <td>123123123124</td>
-                                    <td>0899887664</td>
-                                    <td>hooklm@gmai.com</td>
-                                    <td>Korean</td>
-                                    <td>Gold</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
-                                        <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Lee Kwang Su</td>
-                                    <td>15-01-2000</td>
-                                    <td>Male</td>
-                                    <td>123123123124</td>
-                                    <td>0899887623</td>
-                                    <td>sulk@gmai.com</td>
-                                    <td>Korean</td>
-                                    <td>Silver</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
-                                        <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Lee Han Che</td>
-                                    <td>17-03-1999</td>
-                                    <td>Male</td>
-                                    <td>123123123454</td>
-                                    <td>08998876987</td>
-                                    <td>chlk@gmai.com</td>
-                                    <td>Korean</td>
-                                    <td>Diamond</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
-                                        <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Kim Han Cook</td>
-                                    <td>11-09-1994</td>
-                                    <td>Female</td>
-                                    <td>123123123852</td>
-                                    <td>089988767665</td>
-                                    <td>cookkh@gmai.com</td>
-                                    <td>Korean</td>
-                                    <td>Platinum</td>
-                                    <td>
-                                        <a href="#editEmployeeModal" className="edit" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Edit"></i></a>
-                                        <a href="#deleteEmployeeModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete"></i></a>
-                                    </td>
-                                </tr> */}
                             </tbody>
                         </table>
                         <div className="clearfix">

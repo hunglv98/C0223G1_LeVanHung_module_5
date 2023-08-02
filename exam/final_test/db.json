@@ -1,0 +1,110 @@
+{
+  "songs": [
+    {
+      "id": 1,
+      "name": "See you again",
+      "singer": "Wiz Khalifa",
+      "author": "Hle",
+      "time": "03:55",
+      "like": "4",
+      "status": {
+        "id": 2,
+        "name": "Public"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Shape of you",
+      "singer": "Ed Sheeran",
+      "author": "Hle",
+      "time": "06:06",
+      "like": "43",
+      "status": {
+        "id": 2,
+        "name": "Public"
+      }
+    },
+    {
+      "name": "Symphony",
+      "singer": "abc",
+      "author": "Clean Bandit",
+      "time": "04:05",
+      "like": "111",
+      "status": {
+        "id": 2,
+        "name": "Public"
+      },
+      "id": 3
+    },
+    {
+      "name": "Love you forever",
+      "singer": "Advin Strange",
+      "author": "Hle",
+      "time": "02:20",
+      "like": "0",
+      "status": {
+        "id": 2,
+        "name": "Public"
+      },
+      "id": 4
+    },
+    {
+      "name": "Hoa",
+      "singer": "Advin Strange",
+      "author": "Hle",
+      "time": "02:20",
+      "like": "0",
+      "status": {
+        "id": 1,
+        "name": "Private"
+      },
+      "id": 5
+    },
+    {
+      "name": "Day by Day",
+      "singer": "Bigbang",
+      "author": "Hle",
+      "time": "04:00",
+      "like": "0",
+      "status": {
+        "id": 1,
+        "name": "Private"
+      },
+      "id": 6
+    },
+    {
+      "name": "I Love You",
+      "singer": "Hung Le",
+      "author": "Hle",
+      "time": "04:04",
+      "like": "0",
+      "status": {
+        "id": 1,
+        "name": "Private"
+      },
+      "id": 7
+    },
+    {
+      "name": "Nokia",
+      "singer": "chanhtv",
+      "author": "chanhtv",
+      "time": "08:99",
+      "like": "0",
+      "status": {
+        "id": 1,
+        "name": "Private"
+      },
+      "id": 8
+    }
+  ],
+  "status": [
+    {
+      "id": 1,
+      "name": "Private"
+    },
+    {
+      "id": 2,
+      "name": "Public"
+    }
+  ]
+}

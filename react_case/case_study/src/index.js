@@ -29,7 +29,7 @@ root.render(
     <Route path='/service/edit' element={<EditService />} />
     <Route path='/customer' element={<ListCustomer />} />
     <Route path='/customer/create' element={<CreateCustomer />} />
-    <Route path='/customer/edit' element={<EditCustomer />} />
+    <Route path='/customer/edit/:id' element={<EditCustomer />} />
     <Route path='/contract' element={<ListContract />} />
     <Route path='/contract/create' element={<CreateContract />} />
     <Route path='/contract/edit' element={<EditContract />} />
